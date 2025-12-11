@@ -21,10 +21,10 @@
     <p class="subtitle">By Ram — Data Analyst</p>
 
     <div class="grid">
-      <img src="Live Dashboard/Screenshot 2025-12-10 151902.png" class="dashboard-img" alt="Dashboard Page 1">
-      <img src="Live Dashboard/Screenshot 2025-12-10 152029.png" class="dashboard-img" alt="Dashboard Page 2">
-      <img src="Live Dashboard/Screenshot 2025-12-10 152059.png" class="dashboard-img" alt="Dashboard Page 3">
-      <img src="Live Dashboard/Screenshot 2025-12-10 152138.png" class="dashboard-img" alt="Dashboard Page 4">
+      <img src="dashboard/Screenshot 2025-12-10 151902.png" class="dashboard-img" alt="Dashboard Page 1">
+      <img src="dashboard/Screenshot 2025-12-10 152029.png" class="dashboard-img" alt="Dashboard Page 2">
+      <img src="dashboard/Screenshot 2025-12-10 152059.png" class="dashboard-img" alt="Dashboard Page 3">
+      <img src="dashboard/Screenshot 2025-12-10 152138.png" class="dashboard-img" alt="Dashboard Page 4">
     </div>
 
     <footer>
