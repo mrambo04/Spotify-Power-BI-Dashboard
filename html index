@@ -3,137 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify Top 50 World | Power BI Dashboard</title>
+    <title>Spotify Top 50 World | Power BI Dashboard| Ram</title>
 
     <style>
         body {
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: #ffffff;
+            background: #0e0e0e;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
         }
 
         .container {
-            max-width: 1100px;
+            width: 100%;
+            max-width: 1150px;
             margin: auto;
-            padding: 40px 20px;
+            padding: 20px;
         }
 
-        header {
-            text-align: center;
-            margin-bottom: 50px;
+        h1 {
+            font-size: 26px;
+            margin-bottom: 5px;
         }
 
-        header h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
-            color: #1DB954;
+        p.subtitle {
+            color: #bcbcbc;
+            font-size: 14px;
         }
 
-        header p {
-            font-size: 18px;
-            opacity: 0.9;
+        .dashboard-img {
+            width: 100%;
+            border-radius: 14px;
+            margin-top: 20px;
+            box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.08);
         }
 
-        .section {
-            background: rgba(255, 255, 255, 0.08);
-            padding: 30px;
-            border-radius: 12px;
-            margin-bottom: 30px;
-        }
-
-        .section h2 {
-            color: #1DB954;
-            margin-bottom: 15px;
-        }
-
-        ul {
-            line-height: 1.8;
-        }
-
-        .btn-group {
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .btn {
+        .download-btn {
             display: inline-block;
-            margin: 10px;
-            padding: 14px 28px;
-            border-radius: 30px;
-            text-decoration: none;
+            margin-top: 18px;
+            padding: 10px 18px;
+            background: #ff8a3d;
+            color: black;
             font-weight: bold;
-            color: #ffffff;
-            background-color: #1DB954;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            border-radius: 8px;
+            text-decoration: none;
         }
 
         footer {
-            text-align: center;
-            margin-top: 50px;
-            opacity: 0.7;
+            margin-top: 25px;
             font-size: 14px;
+            color: #9c9c9c;
+        }
+
+        .watermark {
+            margin-top: 12px;
+            font-size: 13px;
+            color: #646464;
         }
     </style>
 </head>
 
 <body>
+
     <div class="container">
 
-        <header>
-            <h1>🎵 Spotify Top 50 World</h1>
-            <p>Power BI Dashboard | Global Music Analytics</p>
-        </header>
+        <h1>Spotify Top 50 World<br>Power BI Dashboard</h1>
+        <p class="subtitle">A Power BI Dashboard designed by Ram</p>
 
-        <div class="section">
-            <h2>📌 Project Overview</h2>
-            <p>
-                This project analyzes the <strong>Spotify Top 50 World</strong> dataset using
-                <strong>Power BI</strong>. It provides insights into popular songs, top artists,
-                explicit content distribution, ranking trends, and audio features.
-            </p>
-        </div>
+        <img src="Power BI Dashboard/Screenshot 2025-12-03 151112.png" class="dashboard-img" alt="Andhra Weather Dashboard">
 
-        <div class="section">
-            <h2>📊 Dashboard Features</h2>
-            <ul>
-                <li>Top Songs and Artist Performance</li>
-                <li>Average, Maximum and Minimum Popularity</li>
-                <li>Explicit vs Non-Explicit Song Analysis</li>
-                <li>Song Duration and Rank Insights</li>
-                <li>Artist-wise and Year-wise Trends</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>🛠 Tools & Technologies</h2>
-            <ul>
-                <li>Power BI</li>
-                <li>DAX</li>
-                <li>Power Query</li>
-                <li>CSV Dataset</li>
-                <li>GitHub</li>
-            </ul>
-        </div>
-
-        <div class="btn-group">
-            <a class="btn" href="https://github.com/mrambo04/Spotify-Power-BI-Dashboard" target="_blank">
-                📂 View GitHub Repository
-            </a>
-            <a class="btn" href="Power Bi pbix/Spotify Dashboard.pbix" target="_blank">
-                📊 Download Power BI File
-            </a>
-        </div>
+        <div class="watermark">© 2025 Ram — Data Analyst</div>
 
         <footer>
-            <p>Created by Ram | Data Analyst / Data Science Enthusiast</p>
+            Built with Power BI • Hosted on GitHub Pages
         </footer>
-
     </div>
+
 </body>
 </html>
+
