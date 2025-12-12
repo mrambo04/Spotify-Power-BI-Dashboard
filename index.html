@@ -1,89 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify Top 50 World Analytics Dashboard | Ram</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spotify Top 50 World Dashboard | Ram</title>
 
-    <style>
-        body {
-            margin: 0;
-            background: #0e0e0e;
-            color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
+<!-- Spotify Font -->
+<link href="https://fonts.cdnfonts.com/css/circular-std" rel="stylesheet" />
 
-        .container {
-            width: 100%;
-            max-width: 1150px;
-            margin: auto;
-            padding: 20px;
-        }
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg">
 
-        h1 {
-            font-size: 26px;
-            margin-bottom: 5px;
-        }
+<style>
+/* =============================
+   GLOBAL PREMIUM SETTINGS
+============================= */
 
-        p.subtitle {
-            color: #bcbcbc;
-            font-size: 14px;
-        }
+body {
+    margin: 0;
+    background: #0e0e0e;
+    color: #fff;
+    font-family: 'Circular Std', sans-serif;
+    text-align: center;
+    overflow-x: hidden;
+    animation: pageFade 1.2s ease-in-out;
+}
 
-        .dashboard-img {
-            width: 100%;
-            border-radius: 14px;
-            margin-top: 20px;
-            box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.08);
-        }
+/* Subtle grainy background texture */
+body:before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: url("https://i.imgur.com/8aYkYzu.png");
+    opacity: 0.08;
+    pointer-events: none;
+}
 
-        .download-btn {
-            display: inline-block;
-            margin-top: 18px;
-            padding: 10px 18px;
-            background: #1DB954;
-            color: black;
-            font-weight: bold;
-            border-radius: 8px;
-            text-decoration: none;
-        }
+/* Page Fade */
+@keyframes pageFade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 
-        footer {
-            margin-top: 25px;
-            font-size: 14px;
-            color: #9c9c9c;
-        }
+/* =============================
+   STICKY GLASS HEADER
+============================= */
 
-        .watermark {
-            margin-top: 12px;
-            font-size: 13px;
-            color: #646464;
-        }
-    </style>
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    backdrop-filter: blur(12px);
+    background: rgba(0,0,0,0.35);
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* =============================
+   PARALLAX WAVE BANNER
+============================= */
+
+.wave-banner {
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(180deg, #1DB95444, #0e0e0e 70%);
+    position: relative;
+    overflow: hidden;
+}
+
+.wave {
+    width: 200%;
+    height: 120px;
+    background: url("https://raw.githubusercontent.com/mrambo04/waveform-assets/main/wave.svg");
+    background-size: contain;
+    animation: waveMove 10s linear infinite, waveGlow 2.5s ease-in-out infinite alternate;
+    opacity: 0.8;
+    position: absolute;
+    top: 10px;
+    left: -50%;
+}
+
+/* Parallax animation */
+@keyframes waveMove {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* Glow effect */
+@keyframes waveGlow {
+    from { filter: drop-shadow(0 0 6px #1DB954); }
+    to { filter: drop-shadow(0 0 14px #1DB954); }
+}
+
+/* =============================
+   HEADER TITLE
+============================= */
+
+h1 {
+    font-size: 38px;
+    margin-top: 20px;
+    color: #1DB954;
+    animation: glowPulse 2s infinite alternate;
+}
+
+@keyframes glowPulse {
+    0% { text-shadow: 0 0 10px #1DB954; }
+    100% { text-shadow: 0 0 22px #1DB954; }
+}
+
+.subtitle {
+    color: #bcbcbc;
+    font-size: 17px;
+}
+
+/* =============================
+   BUTTON WITH RIPPLE EFFECT
+============================= */
+
+.btn-main {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 14px 30px;
+    background: #1DB954;
+    color: black;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-main:hover {
+    background: #18a84c;
+}
+
+/* Ripple Effect */
+.btn-main:active::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: rgba(255,255,255,0.4);
+    border-radius: 50%;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: ripple 0.6s linear;
+}
+
+@keyframes ripple {
+    to { transform: translate(-50%, -50%) scale(3); opacity: 0; }
+}
+
+/* =============================
+   DASHBOARD GRID (4 IMAGES)
+============================= */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    padding: 30px 25px;
+}
+
+/* Mixed Animation: Fade + Slide + Glow */
+.card {
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(12px);
+    padding: 12px;
+    border-radius: 16px;
+    opacity: 0;
+    animation: fadeSlide 1s forwards;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:nth-child(1) { animation-delay: 0.2s; }
+.card:nth-child(2) { animation-delay: 0.4s; }
+.card:nth-child(3) { animation-delay: 0.6s; }
+.card:nth-child(4) { animation-delay: 0.8s; }
+
+/* Stagger Slide + Fade */
+@keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hover Premium Glow */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 28px rgba(29,185,84,0.55);
+}
+
+.dashboard-img {
+    width: 100%;
+    border-radius: 12px;
+    transition: 0.25s;
+}
+
+.card:hover .dashboard-img {
+    transform: scale(1.06);
+}
+
+/* =============================
+   EQUALIZER ANIMATION (Spotify Bars)
+============================= */
+
+.equalizer {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.bar {
+    width: 6px;
+    height: 20px;
+    background: #1DB954;
+    animation: eq 0.8s infinite alternate;
+}
+
+.bar:nth-child(2) { animation-delay: 0.2s; height: 26px; }
+.bar:nth-child(3) { animation-delay: 0.4s; height: 33px; }
+.bar:nth-child(4) { animation-delay: 0.6s; height: 26px; }
+.bar:nth-child(5) { animation-delay: 0.8s; height: 20px; }
+
+@keyframes eq {
+    from { transform: scaleY(0.4); }
+    to { transform: scaleY(1.2); }
+}
+
+/* =============================
+   SOCIAL LINKS
+============================= */
+
+.socials {
+    margin-top: 25px;
+}
+
+.socials a {
+    margin: 0 14px;
+    color: #1DB954;
+    font-size: 28px;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.socials a:hover {
+    color: #39ff93;
+    text-shadow: 0 0 15px #39ff93;
+}
+
+/* =============================
+   FOOTER
+============================= */
+
+footer {
+    margin-top: 35px;
+    font-size: 14px;
+    color: #9a9a9a;
+}
+</style>
 </head>
 
 <body>
 
-    <div class="container">
-
-        <h1>Spotify Top 50 World Analytics Dashboard</h1>
-        <p class="subtitle">A Power BI Dashboard designed by Ram</p>
-
-        <!-- Replace with your screenshot -->
-        <img src="dashboard/Screenshot 2025-12-10 152029.png" class="dashboard-img" alt="Spotify Top 50 Dashboard">
-
-        <a class="download-btn" href="Power Bi pbix/Spotify Dashboard.pbix" download>
-            Download PBIX File
-        </a>
-
-        <div class="watermark">© 2025 Ram — Data Analyst</div>
-
-        <footer>
-            Built with Power BI • Hosted on GitHub Pages
-        </footer>
+<!-- Sticky Glass Header -->
+<header>
+    <div class="equalizer">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
     </div>
+</header>
+
+<!-- Parallax Wave Banner -->
+<div class="wave-banner">
+    <div class="wave"></div>
+</div>
+
+<h1>Spotify Top 50 World Dashboard</h1>
+<p class="subtitle">A Premium Power BI Dashboard Designed by Ram</p>
+
+<!-- LIVE BUTTON -->
+<a class="btn-main" href="https://github.com/mrambo04/Spotify-Power-BI-Dashboard" target="_blank">
+    🎧 View Live Dashboard
+</a>
+
+<!-- 4 IMAGE GRID -->
+<div class="grid">
+    <div class="card"><img src="dashboard/Screenshot 2025-12-10 151902.png" class="dashboard-img"></div>
+    <div class="card"><img src="dashboard/Screenshot 2025-12-10 152029.png" class="dashboard-img"></div>
+    <div class="card"><img src="dashboard/Screenshot 2025-12-10 152059.png" class="dashboard-img"></div>
+    <div class="card"><img src="dashboard/Screenshot 2025-12-10 152138.png" class="dashboard-img"></div>
+</div>
+
+<!-- SOCIAL ICONS -->
+<div class="socials">
+    <a href="https://github.com/mrambo04" target="_blank">🐙</a>
+</div>
+
+<footer>
+    © 2025 Ram — Data Analyst • Built with Power BI • Hosted on GitHub Pages
+</footer>
 
 </body>
 </html>
+
 
