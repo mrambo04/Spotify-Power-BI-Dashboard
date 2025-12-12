@@ -5,6 +5,10 @@
 <img width="970" height="540" alt="Screenshot 2025-12-10 152059" src="https://github.com/user-attachments/assets/b16123bb-f953-4751-aa73-b6b7465ef155" />
 <img width="975" height="545" alt="Screenshot 2025-12-10 152138" src="https://github.com/user-attachments/assets/ef374edd-aa09-49dd-96d3-da4cec6396ea" />
 
+
+https://github.com/user-attachments/assets/9d90f480-5edb-4c7e-8cfd-7ad19c6f75fa
+
+
 This project is a complete Spotify Top 50 World Analytics Dashboard built in Power BI, visualizing global song rankings, artist performance, popularity scores, audio features, and explicit content distribution.
 
 It covers insights from Spotify’s Top 50 global chart featuring:
