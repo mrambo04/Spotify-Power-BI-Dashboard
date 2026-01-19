@@ -9,7 +9,7 @@ Live Link :https://mrambo04.github.io/Spotify-Power-BI-Dashboard/
   
 This project is a complete Spotify Top 50 World Analytics Dashboard built in Power BI, visualizing global song rankings, artist performance, popularity scores, audio features, and explicit content distribution.
 
-It covers insights from Spotify’s Top 50 global chart featuring: 
+It covers insights from Spotify’s Top 50 global chart featuring:  
 
 - Taylor Swift   
  
