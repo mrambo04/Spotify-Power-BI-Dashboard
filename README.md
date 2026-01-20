@@ -11,7 +11,7 @@ This project is a complete Spotify Top 50 World Analytics Dashboard built in Pow
 
 It covers insights from Spotify’s Top 50 global chart featuring:  
   
-- Taylor Swift    
+- Taylor Swift     
  
 - The Weeknd
   
