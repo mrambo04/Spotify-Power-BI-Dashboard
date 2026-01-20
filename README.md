@@ -28,7 +28,7 @@ It covers insights from Spotify’s Top 50 global chart featuring:
 This Power BI dashboard analyzes Spotify’s global Top 50 songs using custom DAX calculations, data modeling, and modern UI design inspired by real-world music analytics platforms.
  
 *The visualizations highlight:*
-
+ 
 - ⭐ Top Songs & Popular Artists
 
 - 📈 Popularity Metrics (Avg, Max, Min)
