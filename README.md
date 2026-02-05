@@ -13,7 +13,7 @@ It covers insights from Spotify’s Top 50 global chart featuring:
    
 - Taylor Swift     
   
-- The Weeknd
+- The Weeknd 
   
 - Drake 
  
