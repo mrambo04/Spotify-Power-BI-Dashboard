@@ -16,7 +16,7 @@ It covers insights from Spotify’s Top 50 global chart featuring:
 - The Weeknd       
       
 - Drake  
- 
+  
 - Ed Sheeran 
   
 - Dua Lipa
