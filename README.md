@@ -17,7 +17,7 @@ It covers insights from Spotify’s Top 50 global chart featuring:
       
 - Drake  
   
-- Ed Sheeran 
+- Ed Sheeran  
   
 - Dua Lipa
 
