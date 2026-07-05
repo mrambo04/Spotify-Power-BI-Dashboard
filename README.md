@@ -19,7 +19,7 @@ It covers insights from Spotify’s Top 50 global chart featuring:
     
 - Ed Sheeran    
     
-- Dua Lipa
+- Dua Lipa 
 
   The dashboard provides a clean, modern interface with insights into popularity, song duration, explicit content, artist trends, and audio features.
 
